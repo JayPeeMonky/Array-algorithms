@@ -1,0 +1,28 @@
+package com.company;
+import ibadts.*;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] array = {5, 7, 44, 567, 1001};
+        int low = 0;
+        int key = 567;
+        int high = array.length - 1;
+        boolean found = false;
+        while (!found && low <= high) {
+            int mid = (low + high) / 2;
+            if (array[mid] == key) {
+                found = true;
+            }
+            else if (array [mid] > key) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+        System.out.println(found);
+    }
+}
