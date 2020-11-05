@@ -19,7 +19,7 @@ public class Main {
             else if (array [mid] > key) {
                 high = mid - 1;
             }
-            else {
+            else { //array[mid] < key
                 low = mid + 1;
             }
         }
